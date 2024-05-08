@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>TutteNet</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TutteNet: Injective 3D Deformations by Composition of 2D Mesh Deformations" />
+    <meta name="twitter:description" content="Project page for TutteNet: Injective 3D Deformations by Composition of 2D Mesh Deformations." />
+    <!-- <meta name="twitter:image" content="https://jiaxin-lu.github.io/assets/img/jigsaw.png" /> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                TutteNet: Injective 3D Deformations by Composition of 2D Mesh Deformations
+                </br>
+                <small>
+                    CVPR 2024
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://sites.google.com/view/bosun/home">
+                            <strong> Bo Sun </strong>
+                        </a> &#42
+<!--						<sup>&#42</sup>-->
+                    </li>
+                    <li>
+                        <a href="https://imagine.enpc.fr/~groueixt/">
+                            <strong> Thibault Groueix </strong>
+                        </a> &#42
+<!--						<sup>&#42</sup>-->
+                    </li>
+                    <li>
+                        <a href="https://www.cs.utexas.edu/~song/">
+                            <strong> Chen Song </strong>
+                        </a> &#42
+<!--						<sup>&#42</sup>-->
+                    </li>
+                    <li>
+                        <a href="https://www.cs.utexas.edu/~huangqx/">
+                            <strong> Qixing Huang </strong>
+                        </a> &#42
+<!--						<sup>&#42</sup>-->
+                    </li>
+                    <li>
+                        <a href="https://noamaig.github.io/">
+                            <strong> Noam Aigerman </strong>
+                        </a>
+<!--						<sup>1</sup>-->
+                    </li><br>
+<!--					<sup>1</sup> -->
+                    <!-- University of Texas at Austin -->
+<!--                  &nbsp;&nbsp;&nbsp;&nbsp;-->
+
+					</ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="">
+                            <image src="img/paper_img.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+						<li>
+                            <a href="https://github.com/GitBoSun/TutteNet">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p style="text-align:center;">
+                    <image src="img/teaser.png" class="img-responsive">
+                </p>
+                <p class="text-justify">
+                    This work proposes a novel representation of injective deformations of 3D space, 
+                    which overcomes existing limitations of injective methods, namely inaccuracy, 
+                    lack of robustness, and incompatibility with general learning and optimization 
+                    frameworks. Our core idea is to reduce the problem to a “deep” composition of 
+                    multiple 2D mesh-based piecewise-linear maps. Namely, we build differentiable 
+                    layers that produce mesh deformations through Tutte’s embedding (guaranteed to 
+                    be injective in 2D), and compose these layers over different planes to create 
+                    complex 3D injective deformations of the 3D volume. We show our method provides 
+                    the ability to efficiently and accurately optimize and learn complex deformations, 
+                    outperforming other injective approaches. As a main application, we produce complex 
+                    and artifact-free NeRF and SDF deformations.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Representation of injective 3D deformations
+                </h3>
+                <p style="text-align:center;">
+                    <image src="img/representation.png" class="img-responsive">
+                </p>
+				
+				</div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Detailed NeRF Deformation Process 
+                </h3>
+                <a href="http://www.youtube.com/watch?feature=player_embedded&v=_kLJghHNiwQ" target="_blank">
+                    <img src="http://img.youtube.com/vi/_kLJghHNiwQ/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
+                   </a>
+				<p class="text-justify">
+                  We show detailed deformation on one NeRF shape with the above mentioned representation. 
+                  Here we use 6 layers and alternate with x-y-z deformation planes. 
+                </p>
+				</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Elastic NeRF Deformation
+                </h3>
+                <a href="http://www.youtube.com/watch?feature=player_embedded&v=LJsfEFTT_BY" target="_blank">
+                    <img src="http://img.youtube.com/vi/LJsfEFTT_BY/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
+                   </a>
+				<br>
+                <p class="text-justify">
+                    We show the orignal and deformed NeRFs with Instant-NGP method. The selected constraints illustrated with green arrows on 
+                    the left column. 
+                </p>
+                <p style="text-align:center;">
+                    <image src="img/real_nerf.png" class="img-responsive">
+                </p>
+				<p class="text-justify">
+                    We show the deformation results of phone-captured NeRFs with Nerfacto method. 
+                    
+                </p>
+				</div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Human Reposing
+                </h3>
+                <p style="text-align:center;">
+                    <image src="img/new_posing.png" class="img-responsive">
+                </p>
+				<br>
+                <p class="text-justify">
+                We learn a deformation model on SMPL human models and apply the trained network to deform neural fields.
+				The neural network from the learning experiment (Section 4.2 in the paper), trained to predict deformations 
+                on a dataset of human SMPL meshes (top row, demonstrating the desired target pose), 
+                is seamlessly applied to deform synthetic and real NeRFs (middle two rows), and SDFs (bottom row).
+                </p>
+				</div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@inproceedings{sun2024tuttenet,
+	title={TutteNet: Injective 3D Deformations by Composition of 2D Mesh Deformations},
+	author={Bo Sun, Thibault Groueix, Chen Song, Qixing Huang, and Noam Aigerman},
+	booktitle={The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2024},
+	year={2024},
+}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                   <br>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
