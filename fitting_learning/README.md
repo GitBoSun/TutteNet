@@ -1,8 +1,6 @@
 ## About this Branch 
 This branch includes code for SMPL fitting and learning experiments, which has a clearer view of our TutteNet. 
 
-![overview](../images/new_reposing.pdf)
-
 ## Installation 
 This code is developed based on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet), which is a moduled codebase. To install it, run 
 ```
