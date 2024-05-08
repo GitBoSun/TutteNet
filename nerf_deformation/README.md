@@ -1,6 +1,8 @@
 ## About this Branch
 This branch includes code for NeRF training, elastic deformation and rendering in the Nerfstudio codebase. 
 We provide deformation for two methods: Instant-NGP and Nerfacto, where the former is more suitable for clean objects and the latter is better for wide boundless NeRFs (e.g. phone-captured NeRFs). 
+
+
 [![Examples of Elastic NeRF Deformation](https://img.youtube.com/vi/LJsfEFTT_BY/default.jpg)](https://youtu.be/LJsfEFTT_BY)
 
 ## Installation 
