@@ -15,3 +15,15 @@ This codebase contains two parts: (1). NeRF deformation (`./nerf_deformation` fo
 NeRF deformation part contains code for NeRF training, deformation, and rendering with Instant-NGP and Nerfacto methods. Fitting and learning parts contains code for SMPL human body deformation. 
 Detailed instructions can be found in their own folders. 
 For the installation instructions, please follow the installation part in `./nerf_deformation` folder. 
+
+## Citation
+
+If you find this repository useful in your research, please cite
+```
+@inproceedings{sun2024tuttenet,
+    title={TutteNet: Injective 3D Deformations by Composition of 2D Mesh Deformations},
+	author={Bo Sun, Thibault Groueix, Chen Song, Qixing Huang, and Noam Aigerman},
+	booktitle={The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2024},
+	year={2024},
+}
+```
