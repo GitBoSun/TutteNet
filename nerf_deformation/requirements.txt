@@ -1,0 +1,9 @@
+trimesh 
+libigl
+torch_geometric
+https://data.pyg.org/whl/torch-2.1.0%2Bcu118/torch_cluster-1.6.3%2Bpt21cu118-cp38-cp38-linux_x86_64.whl
+https://data.pyg.org/whl/torch-2.1.0%2Bcu118/torch_scatter-2.1.2%2Bpt21cu118-cp38-cp38-linux_x86_64.whl
+https://data.pyg.org/whl/torch-2.1.0%2Bcu118/torch_sparse-0.6.18%2Bpt21cu118-cp38-cp38-linux_x86_64.whl
+
+
+

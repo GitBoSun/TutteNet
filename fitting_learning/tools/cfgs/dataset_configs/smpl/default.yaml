@@ -1,0 +1,20 @@
+DATASET: 'SMPLDataset'
+DATA_PATH: '../data/smpl/all_0.3'
+
+FPS_RATIO: 0.01 
+# TEMPLATE_PATH: './template/smpl_template.obj'
+TEMPLATE_PATH: './template/smpl_template_leg.obj'
+
+DATA_SPLIT: {
+    'train': train,
+    'test': val
+}
+# NUM_TRAIN: 5000 
+# NUM_VAL: 256
+# NUM_TRAIN: 2000 
+# NUM_VAL: 64
+NUM_TRAIN: 16
+NUM_VAL: 2
+
+MERGE_ALL_ITERS_TO_ONE_EPOCH: False
+

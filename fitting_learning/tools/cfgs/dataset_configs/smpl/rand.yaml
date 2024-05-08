@@ -1,0 +1,33 @@
+DATASET: 'SMPLRandomDataset'
+DATA_PATH: '../data/smpl/all_0.3'
+
+FPS_RATIO: 0.01 
+# TEMPLATE_PATH: './template/smpl_template.obj'
+# TEMPLATE_PATH: './template/smpl_template_leg.obj'
+TEMPLATE_PATH: './template/smpl_template_leg_small.obj'
+
+
+REMOVE_INTERSECTION: True 
+POSE_THRES: 0.5
+
+SAMPLE_GAUSSIAN: True 
+SAMPLE_STD: 0.5
+WEIGHTED_GAUSSIAN: False
+
+
+AMASS_VAL: False 
+AMASS_PATH: '../data/amass_pose'
+
+DATA_SPLIT: {
+    'train': train,
+    'test': val
+}
+
+NUM_TRAIN: 5000 
+NUM_VAL: 128
+
+# NUM_TRAIN: 256 
+# NUM_VAL: 32
+
+MERGE_ALL_ITERS_TO_ONE_EPOCH: False
+

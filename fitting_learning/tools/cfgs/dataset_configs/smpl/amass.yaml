@@ -1,0 +1,39 @@
+DATASET: 'ImageFeatureDataset'
+
+DATA_PATH: '../data/amass_pose'
+
+TEMPLATE_PATH: './template/smpl_template_leg_small.obj'
+SCALE_FACTOR: 1.4 
+
+REMOVE_INTERSECTION: True
+
+GENERATE_SIMPLE: False 
+USE_ALL: False
+
+AMASS_VAL: False
+SET_VAL: False 
+VAL_PATH: '/home/bosun/projects/PCPerception/data/amass_pose/eval_poses_fix.npy'
+
+FEATURE_PATH: '/home/bosun/projects/PCPerception/data/rendered_data_std2_1M'
+RANDOM_SAMPLE: True ### 
+USE_POSE_FEATURE: False
+
+SAMPLE_GAUSSIAN: True #### 
+STD_FACTOR: 1.5
+SHAPE_STD_FACTOR: 2.0
+
+ADD_GENDER: True
+
+DATA_SPLIT: {
+    'train': train,
+    'test': val
+}
+
+# NUM_TRAIN: 200000 
+# NUM_VAL: 512
+
+NUM_TRAIN: 5000 
+NUM_VAL: 512
+
+MERGE_ALL_ITERS_TO_ONE_EPOCH: False
+

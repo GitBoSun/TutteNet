@@ -1,0 +1,60 @@
+
+MODEL:
+    NAME: TutteModel
+    SCALE: 1
+    MESH_RESOLUTION: 11
+    NUM_LAYERS: 1
+    NUM_INNER_LAYERS: 24
+
+    PREDICT_NORMAL: True
+    USE_SHAPE: True 
+
+    BACKBONE:
+        NAME: CoordinateEncoderFeature
+        FC1_DIM: 512 
+        FC1_DIM_FEA: 512 
+
+        INPUT_CHANNEL: 72
+        # INPUT_CHANNEL: 88 
+
+        DINO_ENCODE_CHANNEL: 64
+        CLIP_ENCODE_CHANNEL: 64
+        
+        USE_POSITIONAL_ENCODING: True 
+        ENCODING_LENGTH: 50  
+
+        USE_POSE_POSITIONAL_ENCODING: False 
+        POSE_ENCODING_LENGTH: 4
+
+    TUTTE_HEAD:
+        NAME: TutteHead3D_Distortion
+        USE_SIGMOID: True
+        USE_PLAIN_SCALE: True
+        
+        W_SCALE: 100.0 
+        ANGLE_SCALE: 100.0
+        
+        EPSILON: 0.2
+        EPSILON_ANGLE: 0.1
+
+        GATHER_MIDDLE_RESULTS: False 
+        
+        USE_FULL: True 
+
+        USE_TRIPLANE: False
+        ROTATE_TRIPLANE: False 
+
+        ADD_JACOBIAN_LOSS: True 
+        JACOBIAN_WEIGHT: 0.1
+
+        ADD_DISTORTION_LOSS: False 
+        ADD_LAYER_DISTORTION_LOSS: False 
+        DISTORTION_WEIGHT: 0.00
+        LAYER_DISTORTION_WEIGHT: 0.00
+
+        COMPUTE_INVERSE: False
+        MIDDLE_WEIGHT_WEIGHT: 1
+
+        LOSS_CONFIG:
+            LOSS: [l1_loss, l2_loss]
+            WEIGHT: [0.0, 1.0]
