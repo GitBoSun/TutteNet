@@ -3,7 +3,7 @@ Code for CVPR 2024 paper TutteNet: Injective 3D Deformations by Composition of 2
 
 [Bo Sun](https://sites.google.com/view/bosun/home), [Thibault Groueix](https://imagine.enpc.fr/~groueixt/), [Chen Song](https://www.cs.utexas.edu/~song/), [Qixing Huang](https://www.cs.utexas.edu/~huangqx/), and [Noam Aigerman](https://noamaig.github.io/)
 
-[[Arxiv]()] [[Project Page]()]
+[[Arxiv](https://arxiv.org/pdf/2406.12121)] [[Project Page](https://gitbosun.github.io/TutteNet/)]
 
 ## Introduction 
 ![overview](images/teaser.png)
